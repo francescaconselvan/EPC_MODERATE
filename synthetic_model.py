@@ -12,7 +12,6 @@ from sdv.evaluation.single_table import get_column_plot
 from sdv.single_table import CTGANSynthesizer
 import pandas as pd
 
-
 def generate_model(dataset, synth_model, save_model, name_model):
     '''
     Create synthetic data unsing sdv library
@@ -76,7 +75,8 @@ def generate_data_and_report(dataset:pd.DataFrame, synthesizer, metadata:SingleT
 
 if __name__ == "__main__":
     # Get data
-    dataset_A = pd.read_csv("EPC_Git/data/Dataset_bui_residential_A.csv", header=0, index_col=0) [:100]
+    dataset_A = pd.read_csv("data/Dataset_bui_residential_A.csv", header=0, index_col=0) [:100]
+    #dataset_A = pd.read_csv("EPC_Git/data/Dataset_bui_residential_A.csv", header=0, index_col=0) [:100]
     mdl = generate_model(
         dataset=dataset_A,
         synth_model='CTGAN',
