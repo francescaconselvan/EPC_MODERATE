@@ -1,6 +1,6 @@
 import pickle
 
-file = 'EPC_model.pkl'
+file = 'A_EPC_NN_model.keras.pkl'
 # Open the pickle file
 with open(file, 'rb') as file:
     data = pickle.load(file)
